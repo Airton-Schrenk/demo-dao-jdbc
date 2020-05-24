@@ -4,18 +4,19 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Seller implements Serializable{
-	
+	//1.Implementar Serializable
 	private static final long serialVersionUID = 1L;
+	//2.Variáveis
 	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
 	private Double baseSalary;
-	
+	//3.Construtor padrão
 	private Department department;
 	public Seller() {
-		
 	}
+	//4.Construtor com argumentos
 	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
 		super();
 		this.id = id;
@@ -25,6 +26,7 @@ public class Seller implements Serializable{
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
+	//5.Getts e Setts
 	public Integer getId() {
 		return id;
 	}
@@ -61,6 +63,8 @@ public class Seller implements Serializable{
 	public void setDepartment(Department department) {
 		this.department = department;
 	}
+	
+	//6 hashcode
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -84,6 +88,7 @@ public class Seller implements Serializable{
 			return false;
 		return true;
 	}
+	//7. toString
 	@Override
 	public String toString() {
 		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
